@@ -12,3 +12,14 @@ function repeatStringNumTimes(str, num) {
 }
 
 repeatStringNumTimes("abc", 3);
+//should return "abcabcabc"
+repeatStringNumTimes("*", 3); 
+//should return "***"
+repeatStringNumTimes("abc", 4); 
+//should return "abcabcabcabc"
+repeatStringNumTimes("abc", 1);
+//should return "abc"
+repeatStringNumTimes("*", 8);
+//should return "********"
+repeatStringNumTimes("abc", -2);
+//should return ""
