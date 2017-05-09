@@ -4,16 +4,12 @@ Remove all elements from the initial array that are of the same
 value as these arguments.*/
 
 function destroyer(arr) {
-  // Remove all the values
   var args = [].slice.call(arguments);
   var arrOnly = args.shift();
-  function keepValue(value){
-    for (var i = 0; i < args.length; i++){
-      return value !== args[i];
-    }
-  }
-  var newArr = arrOnly.filter(keepValue);
-  return newArr;
+  return arr.filter(function(element) {
+    return args.indexOf(element) === -1;
+  });
+}
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3); //should return [1, 1].
